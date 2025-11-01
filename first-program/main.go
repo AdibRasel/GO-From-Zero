@@ -1,4 +1,12 @@
 
+
+
+package main 
+import "fmt"
+
+
+
+
 // // প্রয়োজনীয় package থাকতে হবে
 // package main  // এই ফাইলটি main package এর, অর্থাৎ এটি executable program তৈরি করবে
 
@@ -137,57 +145,123 @@
 
 
 
-package main 
-import "fmt"
 
-
-func main(){
-  age := 18
+// func main(){
+//   age := 18
   
-  if age > 18 { // greather than to 18
-    fmt.Println("You are aligible to be married")
-  } else if age < 18 { // less than to 18
-    fmt.Println("You are not eligible to married, but you can love some one")
-  } else if age == 18 { // eqal to 18 
-    fmt.Println("You are just a teenager, not eligible to be married")
-  }
+//   if age > 18 { // greather than to 18
+//     fmt.Println("You are aligible to be married")
+//   } else if age < 18 { // less than to 18
+//     fmt.Println("You are not eligible to married, but you can love some one")
+//   } else if age == 18 { // eqal to 18 
+//     fmt.Println("You are just a teenager, not eligible to be married")
+//   }
 
-  // Operator
-  // >, >=, <, <=, ==
-  // and => && 
-  // or => ||
-  // not => !
+//   // Operator
+//   // >, >=, <, <=, ==
+//   // and => && 
+//   // or => ||
+//   // not => !
 
-  isPretty := false 
+//   isPretty := false 
 
-  if !isPretty {
-    fmt.Println("ok")
-  }else{
-    fmt.Println("not")
-  }
-
-
-  x := 5
-  xEqual :=5
+//   if !isPretty {
+//     fmt.Println("ok")
+//   }else{
+//     fmt.Println("not")
+//   }
 
 
-  switch x {
-  case 1: fmt.Println("x = 1")
-  case 2: fmt.Println("x = 2")
-  case 3: fmt.Println("x = 3")
-  case 4: fmt.Println("x = 4")
-  case xEqual: fmt.Println("x = 5")
-  case 6: fmt.Println("x = 6")
-  case 7: fmt.Println("x = 7")
-  default: fmt.Println("Not")
-
-  }
+//   x := 5
+//   xEqual :=5
 
 
+//   switch x {
+//   case 1: fmt.Println("x = 1")
+//   case 2: fmt.Println("x = 2")
+//   case 3: fmt.Println("x = 3")
+//   case 4: fmt.Println("x = 4")
+//   case xEqual: fmt.Println("x = 5")
+//   case 6: fmt.Println("x = 6")
+//   case 7: fmt.Println("x = 7")
+//   default: fmt.Println("Not")
+//   }
 
-}
+// }
 
 
 
 
 // ================================== if else switch end ====================================
+
+
+
+
+
+
+
+
+
+
+// ================================== Function Start ====================================
+
+  //Function
+  func add(num1 int, num2 int){
+    sum := num1+num2
+    fmt.Println(sum)
+  }
+
+  // Return Function and Function Type
+  func getNumbers(num1 int, num2 int)(int, int){
+    sum := num1 + num2
+    mul := num1 * num2
+    return sum, mul
+  }
+
+  func getuserName() string {
+    var name string
+    fmt.Println("Enter your name - ")
+    fmt.Scanln(&name)
+    return name
+  }
+
+  func getToNumbers () (int, int){
+    var num1 int 
+    var num2 int 
+    fmt.Println("Enter First number - ")
+    fmt.Scanln(&num1) // & => ampersand
+    fmt.Println("Enter second number -")
+    fmt.Scanln(&num2)
+    return num1, num2
+  }
+
+  func display(name string, sum int){
+    fmt.Println("Hello, ", name)
+    fmt.Println("Sumation = ", sum)
+  }
+
+  func printGoodByeMessage(){
+    fmt.Println("Thank you for using the application")
+    fmt.Println("Goodbye")
+  }
+
+
+  func main (){
+    add(1,5)
+    ResultSum, ResultMul := getNumbers(5, 6)
+    fmt.Println(ResultSum, ResultMul)
+
+    name := getuserName()
+    num1, num2 := getToNumbers()
+    sum := num1 + num2
+    display(name, sum)
+
+    printGoodByeMessage()
+  }
+
+
+
+
+// ================================== Function End ====================================
+
+
